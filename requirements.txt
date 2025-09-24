@@ -8,6 +8,6 @@ sentence-transformers
 chromadb
 pypdf 
 langchain-groq
-gunicorn
+
 
 
