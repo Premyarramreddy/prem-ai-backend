@@ -1,5 +1,5 @@
 import os
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
@@ -12,8 +12,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_groq import ChatGroq   # 🔹 Groq integration
 
 # Load environment variables
-#load_dotenv()
-#os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")  # make sure your .env has GROQ_API_KEY
+load_dotenv()
+os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")  # make sure your .env has GROQ_API_KEY
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -88,4 +88,5 @@ def chat():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+
 
